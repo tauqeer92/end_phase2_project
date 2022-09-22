@@ -29,7 +29,6 @@ class Diary
 
   def best_entry(wpm, min)
     max_words = wpm*min
-    total = 0 
     best = @array.select { |x| x.split.length <= max_words }
     sorted = best.sort_by {|entry| entry.split.length }
     combined_length = sorted.join(' ').split.length
